@@ -1,0 +1,1 @@
+<?php require 'auth.php';require '../config/database.php';$id=(int)($_GET['id']??0);$conn->query("UPDATE products SET status=IF(status='active','inactive','active') WHERE id=$id");header('Location: products.php');exit; ?>
